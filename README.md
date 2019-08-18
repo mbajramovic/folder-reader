@@ -20,7 +20,7 @@ Each part is in separate project in this repository.
 First, clone this repository to your computer:
 
 ```
-git clone 
+git clone https://github.com/mbajramovic/folder-reader.git
 ```
 
 To start REST service navigate to `folder-reader-rest` and execute the following commands:
