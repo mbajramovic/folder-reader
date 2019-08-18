@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 main-div">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label>Broj foldera (6 cifara):</label>
+                    {{input class="form-control" placeholder="Broj" value=_folderNumber name="folderNumber" input=(action 'onInputChange')}}
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn bn-default btn-primary col-md-4" {{action 'onClick'}} disabled={{if _isDisabled true}}>PRIKAŽI SADRŽAJ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

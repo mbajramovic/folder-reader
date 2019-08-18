@@ -1,0 +1,15 @@
+{{alert-window 
+    alert-show=model._alert.show
+    alert-class=model._alert.class
+    alert-message=model._alert.message
+    alert-header=model._alert.header
+    on-close='onCloseAlert'
+    class='alert-win'
+}}
+{{#if (eq model._alert.show false)}}
+    <button type="button" class="btn btn-default btn-primary back-button" {{action "onGoBack"}}>Idi nazad</button>
+{{/if}}
+{{content-container 
+    items=model._items.items
+    class='content-container'
+}}

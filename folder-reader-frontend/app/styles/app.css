@@ -1,0 +1,30 @@
+.main-div {
+    border: 1px solid #2e6da4;
+    padding: 1em;
+}
+
+.folder-number-div {
+   margin-left: 30%;
+   margin-top: 15%;   
+}
+
+.path-link {
+    margin-left: 30%;
+    margin-top: 1%;
+}
+
+.alert-win {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content-container {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.back-button {
+    margin-left: 2%;
+}
