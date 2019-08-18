@@ -32,7 +32,7 @@ npm run dev
 
 Now, the rest service should be started on http://localhost:9000.
 
-To start UI part od application navigate to `folder-reader-frontend` and execute the following command:
+To start UI part od application navigate to `folder-reader-frontend` and execute the following commands:
 
 ```
 npm install
