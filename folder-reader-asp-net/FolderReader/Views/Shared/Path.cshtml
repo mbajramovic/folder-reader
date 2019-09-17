@@ -1,0 +1,49 @@
+@model FolderReader.Models.Path
+@{
+    ViewData["Title"] = "Putanja do foldera";
+}
+<h1>@ViewData["Title"]</h1>
+<p>Potrebno je definisati apsolutnu putanju (npr. C:\Users\user\Desktop) koja vodi do foldera u kome su svi ostali folderi.</p><br>
+
+<div class="folder-number-div">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 main-div">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label>Putanja do foldera:</label>
+                        @using(Html.BeginForm("Path", "Path", FormMethod.Post))
+                        {
+                            @Html.TextBoxFor(model => model.PathName, new {Class="form-control", Placeholder="Putanja"})
+                            @Html.ValidationMessageFor(model => model.PathName, "", new {Class="error-msg"})<br>
+                            <button type="submit" class="btn bn-default btn-primary col-md-6 mt-3">SAČUVAJ</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles
+{
+    <style type="text/css">
+       .main-div {
+            border: 1px solid #2e6da4;
+            padding: 1em;
+        }
+
+        .folder-number-div {
+            margin-left: 30%;
+            margin-top: 15%;   
+        }
+
+        .error-msg {
+            color: red;
+        }
+
+        .success-msg {
+            color: green;
+        }
+    </style>
+}

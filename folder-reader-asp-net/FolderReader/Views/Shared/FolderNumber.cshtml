@@ -1,0 +1,44 @@
+@model FolderReader.Models.FolderNumber
+@{
+    ViewData["Title"] = "Folder Reader";
+}
+
+<div class="folder-number-div">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 main-div">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label>Broj foldera (6 cifara):</label>
+                        @using(Html.BeginForm("FolderNumber", "FolderNumber", FormMethod.Post))
+                        {
+                            @Html.TextBoxFor(model => model.FolderName, new {Class="form-control", Placeholder="Broj foldera"})
+                            @Html.ValidationMessageFor(model => model.FolderName, "", new {Class="error-msg"})
+                            <button type="submit" class="btn bn-default btn-primary col-md-6 mt-3">PRIKAŽI SADRŽAJ</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles
+{
+    <style type="text/css">
+       .main-div {
+            border: 1px solid #2e6da4;
+            padding: 1em;
+        }
+
+        .folder-number-div {
+            margin-left: 30%;
+            margin-top: 15%;   
+        }
+
+        .error-msg {
+            color: red;
+        }
+    </style>
+}
+

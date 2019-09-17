@@ -1,0 +1,26 @@
+@model FolderReader.Models.FolderContent
+@{
+    ViewData["Title"] = "Folder Reader";
+}
+
+<p class="error-msg">@Model.Error</p>
+
+<table class="table table-striped">
+        @foreach(var Content in Model.Content)
+        {
+            <tr>
+                <td>
+                    U folderu <b>@Content.Folder</b> se nalazi datoteka @Html.ActionLink(@Content.File, "FolderContent", "FolderContent", new {folder = @Content.Folder, file=@Content.File}, new {target="_blank"}).
+                </td>
+            </tr>
+        }
+</table>
+
+@section Styles
+{
+    <style type="text/css">
+        .error-msg {
+            color: red;
+        }
+    </style>
+}
